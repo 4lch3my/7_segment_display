@@ -1,6 +1,6 @@
 # 7-segment-display on Arduino
 
-<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup/blob/main/gif.gif"/></p>
+<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup/blob/main/images/gif.gif"/></p>
 
 A 7-segment-display is a small 8-bit display, where you can display numbers and letters with 7 LED's (+ 1 bottom dot).
 In this project we are building and testing this display with an Arduino.
@@ -22,7 +22,7 @@ Difficulty: 3/10
 - A-G letters (marked with A,B,C,D,E,F,G on most diagrams)
 - DisplayDot (marked DP on most diagrams)
 
-<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup/blob/main/7segment_image.png"/></p>
+<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup/blob/main/images/7segment_image.png"/></p>
 
 Every letter corresponds to a tiny LED inside of the display itself what lights up that section. 
 
@@ -33,29 +33,29 @@ First we need to determine if our display is a Common-Cathode (CC) or Common-Ano
 #### Breadboard setup
 Now that we know this, we need to setup our breadboard with all the components before connecting it to the Arduino. I have included a handy image and schematic on how everything needs to be setup on the board. (Coloured wires DO NOT represent the polarity of the wires.)
 
-<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup_temp/blob/main/7_segment_breadboard.png"/></p>
+<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup/blob/main/images/7_segment_breadboard.png"/></p>
 
 After connecting all the wires, you should end up with something like this:
 
-<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup_temp/blob/main/board_setup.jpg"/></p>
+<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup/blob/main/images/board_setup.jpg"/></p>
 
 #### Connecting to Arduino
 
 After the board is setup, we can start working on connecting it to the Arduino. This is where the polarity of the 7-segment-display comes in to play.<br>
 I am using a "Common-Cathode (CC) version", so I will hook up the "X" wire to the "GND" PIN (as marked on the image below). <br>
 
-<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup_temp/blob/main/7_segment_breadboard_Common_Cathode.png"/></p>
+<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup/blob/main/images/7_segment_breadboard_Common_Cathode.png"/></p>
 
 If you have a "Common-Anode (CA)" version, connect the "X" wire to the "5V" PIN on the right side of the Arduino (as marked on the image below). 
 
-<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup_temp/blob/main/7_segment_breadboard_Common_Anode.png"/></p>
+<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup/blob/main/images/7_segment_breadboard_Common_Anode.png"/></p>
 
 !!Make sure you are 100% sure about this, as if you connect it the incorrect way, it will fry and destroy your display!!
 
 
 Now the only thing left to do is connect the Breadboard to the Arduino PIN's. I have added a coloire coded image below, so you can easily attach all cables as needed
 
-<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup_temp/blob/main/7_segment_breadboard_with_wires.png"/></p>
+<p align="center"><img src="https://github.com/4lch3my/7_segment_display_setup/blob/main/images/7_segment_breadboard_with_wires.png"/></p>
 
 #### Installing/Running the software
 Now that the hardware part is out of the way, we can finally test the display. Download the "7_segment_display_test.ino" file from the REPO above and load it on to your Arduino. If all goes well the segments will all light up one after another (the dot included) then it will count from 0 to 9, then repeat all actions in a loop until you don’t reset/unplug it.
