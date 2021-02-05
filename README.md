@@ -67,4 +67,4 @@ Congratulations! You should have a working 7-segment-display on your Arduino now
 
 ## Author
 
-This project was made by 4lch3my on 2021.02.04 and can be viewed on http://4lch3my.net/ *some link will go here as soon as the forum is up*
+This project was made by 4lch3my on 2021.02.04 and can be viewed on http://4lch3my.net/posts/Arduino/2021/7_segment_display/
